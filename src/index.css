@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FAFAFA;
+}
+
+a{
+  color:black;
+  text-decoration: none;
+}
+
+input{
+  display: block;
+  font: inherit;
+  color: inherit;
+}
+input:focus{
+  outline: 1px solid black;
+}
+
+.user{
+  display: none;
+}
+
+.postContainer{
+  width: 100% !important;
+}
+
+
+.gridItem{
+  position: relative;
+  cursor: pointer;
+  }
+  
+  .icons{
+    position: absolute ;
+    top: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    gap: 14px;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+  }
+  
+  .gridItem:hover::before{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    opacity: 1;
+  }
+  
+  .gridItem:hover .icons{
+    opacity: 1;
+  }
+
+
+
+  .profileGrid{
+    display: grid !important;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .gridItem{
+    width: 100% !important;
+  }
+
+
+@media screen and (max-width:720px) {
+  .profileGrid{
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
+@media screen and (max-width:600px) {
+  .profileGrid{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+@media screen and (min-width:800px) {
+  .postContainer{
+    width: unset !important;
+  }
+  .user{
+    display: block;
+  }
+}
