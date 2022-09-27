@@ -5,7 +5,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { AiOutlineHeart,AiFillHeart } from "react-icons/ai";
 import { RiChat1Line } from "react-icons/ri";
 import { AuthContext } from "../context/AuthContext";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 
@@ -40,9 +40,9 @@ export const Card = ({image,likes,postedBy,caption,post,handleLike,id,handleComm
         </Box>
         <BsThreeDots style={{ cursor: "pointer" }} />
       </Box>
-      <CardMedia
-        image={image}
-        sx={{ width: "100%", height: 300, objectFit: "cover" }}
+      <LazyLoadImage
+        src={image}
+        style={{ width: "100%", height: 400, objectFit: "cover" }}
       />
       <Box sx={{ padding: 1 }}>
         <Box sx={{ display: "flex", gap: 1, marginBottom: 1.2 }}>

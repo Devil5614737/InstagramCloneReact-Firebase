@@ -95,7 +95,7 @@ function Login() {
             }}
           >
              {loading?
-            <CircularProgress size={19} sx={{color:'white'}}/>:" Sign up"}
+            <CircularProgress size={19} sx={{color:'white'}}/>:" Login"}
           </Button>
         </Box>
       </Card>
